@@ -79,6 +79,9 @@ class Client(BaseClient):
             raise ValueError("Invalid subreddit")
 
         if subreddit in self.cache:
+            if len(self.cache[subreddit]) == 0:
+                self.cache[subreddit] = await self.FetchPosts(subreddit)
+                _save_cache(self.cache)
             return self.cache[subreddit]
 
         try:
@@ -170,6 +173,9 @@ class ClientSync(BaseClient):
             raise ValueError("Invalid subreddit")
 
         if subreddit in self.cache:
+            if len(self.cache[subreddit]) == 0:
+                self.cache[subreddit] = self.FetchPosts(subreddit)
+                _save_cache(self.cache)
             return self.cache[subreddit]
 
         try:
