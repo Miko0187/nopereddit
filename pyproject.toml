@@ -29,11 +29,6 @@ dynamic = ["dependencies", "optional-dependencies", "version"]
 dependencies = {file = "requirements.txt"}
 version = {attr = "nopereddit.__version__"}
 
-[tool.setuptools]
-packages = [
-    "nopereddit",
-]
-
 [project.urls]
 "GitHub" = "https://github.com/Miko0187/nopereddit"
 
