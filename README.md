@@ -2,7 +2,7 @@
 
 A package to use the reddit api without the need of a reddit account or a reddit bot.
 
-[German version](https://github.com/Miko0187/nopereddit/blob/main/README.de.md)
+[German version](https://github.com/Miko0187/nopereddit/blob/master/README.de.md)
 
 ## ⚙ Features
 
