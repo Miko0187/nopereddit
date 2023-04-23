@@ -1,0 +1,42 @@
+[project]
+name = "nopereddit"
+description = "You want to use the reddit api, but dont want to create an account? I have the solution for you!"
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "Apache-2.0" }
+keywords = ["reddit", "api", "reddit-api", "discord", "discord.py", "py-cord"]
+authors = [
+    { name = "Cryxyemi" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["dependencies", "optional-dependencies", "version"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+version = {attr = "nopereddit.__version__"}
+
+[tool.setuptools]
+packages = [
+    "nopereddit",
+]
+
+[project.urls]
+"GitHub" = "https://github.com/Miko0187/nopereddit"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
